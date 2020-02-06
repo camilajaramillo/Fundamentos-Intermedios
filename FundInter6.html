@@ -1,0 +1,31 @@
+<script>
+    function array(x)
+    {
+        if(x.length<3)
+        {
+            a="null";
+        }
+        else
+        {
+            var nuevo=[];
+            for(var i=1; i<x.length; i++)
+            {
+                if(x[i-1]>x[i])
+                {
+                    nuevo.push(x[i]);
+                    x[i]=x[i-1];
+                }
+            }
+            for(var i=1; i<nuevo.length; i++)
+            {
+                if(nuevo[i-1]>nuevo[i])
+                {
+                    nuevo[i]=nuevo[i-1];
+                }
+                a=nuevo[i];
+            }
+        }
+        return a;
+    }
+    console.log(array([42,1,4,3.14,7]))
+</script>
